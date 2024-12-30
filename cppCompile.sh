@@ -89,10 +89,13 @@ if [ "$1" != "--help" ] && [ "$1" != "-h" ]; then # I got kinda fucked near the 
                     echo -e "Running...\n"
                     sleep 1
                     echo "Beyond this point will be your code."
-                    echo -e "$DIVIDER\n"
-
+                    echo -e "$DIVIDER"
                     sleep 1
                     "$OUTPUT_LOCATION" # Run the compiled project.
+                    RUN_STATUS=$?
+                    echo ""
+                    echo -e "$DIVIDER"
+                    echo "Code execution finished with status: $RUN_STATUS"
                 else
                     echo ""
                 fi
