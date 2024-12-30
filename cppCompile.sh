@@ -97,7 +97,7 @@ if [ "$1" != "--help" ] && [ "$1" != "-h" ]; then # I got kinda fucked near the 
                     echo ""
                 fi
             else
-                echo "Compilation failed...\n"
+                echo -e "\n\nCompilation failed...\n"
             fi
         fi
     fi
