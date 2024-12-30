@@ -1,0 +1,8 @@
+
+A program written by YOU (yes YOU, Ahlyia Green) to more easily compile and run C++ scripts.
+
+Usage: cpp file [options]...
+Options:
+    -h: --help: Displays this message.
+    -o <file>: --output <file>: Changes the output. (default: ./build/product)
+    -r: --run: Runs the compiled project afterwards.
