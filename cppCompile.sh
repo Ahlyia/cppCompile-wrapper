@@ -69,6 +69,8 @@ if [ "$1" != "--help" ] && [ "$1" != "-h" ]; then # I got kinda fucked near the 
             fi
 
             g++ $FILE -o $OUTPUT_LOCATION
+            
+            COMPILE_STATUS=$?
 
             END_TIME=$(date +%s)
 
@@ -80,7 +82,7 @@ if [ "$1" != "--help" ] && [ "$1" != "-h" ]; then # I got kinda fucked near the 
 
             ELAPSED=$((END_TIME - START_TIME))
 
-            if [ $? -eq 0 ]; then
+            if [ "$COMPILE_STATUS" -eq 0 ]; then
                 echo "Compilation successful! ;3 (elapsed: $ELAPSED)"
 
                 if [ "$RUN_AFTER" == "TRUE" ]; then # Check if user wants to run it after.
